@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1038</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CAROLLINHA  | SUPERNUTRE</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/supernutre_ico.png</normaloff>img/supernutre_ico.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background: #fff;
+}
+
+QPushButton{
+background-color:#212121;
+color:#fff;
+border-radius: 5px;
+}
+
+QPushButton:hover{
+background: #000000;
+}
+
+QPushButton#bt_copy{
+background-color: #4caf50;
+color:#fff;
+border-radius: 5px;
+}
+
+QPushButton#bt_copy:hover{
+background:#388E3C;
+}
+
+QPushButton#bt_add{
+background-color: #4caf50;
+color:#fff;
+border-radius: 5px;
+}
+
+QPushButton#bt_add:hover{
+background:#388E3C;
+}
+
+QPushButton#bt_reset_toc{
+background-color: #D32F2F;
+color:#fff;
+border-radius: 5px;
+}
+
+QPushButton#bt_reset_toc:hover{
+background-color: #cb1219;
+}
+
+
+QLabel#label_2{
+color: #757575;
+}
+
+QLabel#label_2:hover{
+color: #212121;
+}
+
+QPushButton#bt_reset{
+background:#fff;
+border: 1px solid #BDBDBD;
+border-radius: 2px
+}
+
+QPushButton#bt_reset:hover{
+border: 1px solid #388E3C;
+}
+
+QPushButton#bt_close{
+background:#fff;
+border: 1px solid #BDBDBD;
+border-radius: 2px;
+padding-top:1px;
+}
+
+QPushButton#bt_close:hover{
+border: 1px solid #cb1219;
+}
+
+QPushButton#bt_open_plan{
+background:#fff;
+border: 1px solid #BDBDBD;
+border-radius: 2px
+}
+
+QPushButton#bt_open_plan:hover{
+border: 1px solid #FF9800;
+}
+
+QPushButton#bt_edit_plan{
+background:#fff;
+border: 1px solid #BDBDBD;
+border-radius: 2px
+}
+
+QPushButton#bt_edit_plan:hover{
+border: 1px solid #1976D2;
+}
+
+QPushButton#bt_config{
+background:#fff;
+border: 1px solid #BDBDBD;
+border-radius: 2px;
+padding-top:1px;
+}
+
+QPushButton#bt_config:hover{
+border: 1px solid #FF9800;
+}
+
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>102</y>
+      <width>1000</width>
+      <height>210</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>PLANILHA</string>
+    </property>
+    <widget class="QLabel" name="lb_file_name">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>900</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_save_name">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>900</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_file_name_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>28</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Arquivo de Entrada</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lb_file_name_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>78</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Arquivo de Saída</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bt_edit_plan">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>100</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Salvar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>img/save-file.png</normaloff>img/save-file.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bt_open_plan">
+     <property name="geometry">
+      <rect>
+       <x>940</x>
+       <y>50</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Abrir&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>img/folder open.png</normaloff>img/folder open.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bt_process">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>960</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>REMOVER ESPAÇOS EM BRANCO NA PLANILHA</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1000</width>
+      <height>70</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 1px solid #ccc;
+border-radius: 5px;
+background-color: #212121;
+</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLabel" name="titulo">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>13</y>
+       <width>321</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>22</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #fff;
+border: none;</string>
+     </property>
+     <property name="text">
+      <string>CAROLLINHA</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="gp_logo">
+     <property name="geometry">
+      <rect>
+       <x>840</x>
+       <y>13</y>
+       <width>147</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:#fff;</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>3</y>
+        <width>141</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border: 1px solid #ccc;
+border-radius: 5px;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>img/supernutre.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="bt_reset">
+    <property name="geometry">
+     <rect>
+      <x>933</x>
+      <y>320</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Reset&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/reset form.png</normaloff>img/reset form.png</iconset>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>680</y>
+      <width>131</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>2024 @ Eduardo Filgueiras</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bt_config">
+    <property name="geometry">
+     <rect>
+      <x>979</x>
+      <y>320</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Configurar Aba Inicial&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>img/config.png</normaloff>img/config.png</iconset>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>360</y>
+      <width>1000</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>8</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>EltonTOC</string>
+    </property>
+    <widget class="QTextEdit" name="textEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>28</y>
+       <width>960</width>
+       <height>221</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bt_remove">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>171</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>REMOVER ESPAÇOS</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bt_copy">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>260</y>
+       <width>131</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>COPIAR TEXTO</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="bt_reset_toc">
+     <property name="geometry">
+      <rect>
+       <x>870</x>
+       <y>260</y>
+       <width>111</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>RESET TOC</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>320</y>
+      <width>880</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="textVisible">
+     <bool>true</bool>
+    </property>
+    <property name="invertedAppearance">
+     <bool>false</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNovo_Contato">
+   <property name="text">
+    <string>Inserir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionSobre">
+   <property name="text">
+    <string>Sobre</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Abrir Arquivo</string>
+   </property>
+  </action>
+  <action name="actionOpenFolder">
+   <property name="text">
+    <string>Abrir Pasta</string>
+   </property>
+  </action>
+  <action name="actionSalvarArquivo">
+   <property name="text">
+    <string>Salvar Arquivo</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>bt_edit_plan</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
