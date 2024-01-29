@@ -1,7 +1,7 @@
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import QMessageBox, QFileDialog
 from openpyxl import load_workbook
-import os, time, csv
+import os, time, csv, clipboard
 
 # váriáveis globais
 arquivo = '-'
@@ -181,6 +181,21 @@ def gerar_recibo(entrada, saida):
     alert('Espaços em branco removidos com Sucesso!  ')
 
 
+# EltonTOC
+def split():
+    texto = main.input_text.toPlainText()
+    resultado = ' '.join(texto.split())
+    main.input_text.setText(resultado)
+  
+
+def reset_toc():
+    main.input_text.setText('')
+
+
+def copy():
+    clipboard.copy(main.input_text.toPlainText())
+
+
 # interface
 app = QtWidgets.QApplication([])
 # main
@@ -195,6 +210,9 @@ main.bt_config.clicked.connect(editar_configuracao)
 main.bt_reset.clicked.connect(reset)
 edit.bt_save_config.clicked.connect(salvar_configuracao)
 main.actionSalvarArquivo.triggered.connect(save_file)
+main.bt_split.clicked.connect(split)
+main.bt_copy.clicked.connect(copy)
+main.bt_reset_toc.clicked.connect(reset_toc)
 # inicializar
 main.show()
 app.exec()

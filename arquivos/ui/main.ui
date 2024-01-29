@@ -475,7 +475,7 @@ border-radius: 5px;</string>
     <property name="title">
      <string>EltonTOC</string>
     </property>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QTextEdit" name="input_text">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -485,7 +485,7 @@ border-radius: 5px;</string>
       </rect>
      </property>
     </widget>
-    <widget class="QPushButton" name="bt_remove">
+    <widget class="QPushButton" name="bt_split">
      <property name="geometry">
       <rect>
        <x>20</x>
