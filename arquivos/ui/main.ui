@@ -343,7 +343,7 @@ background-color: #212121;
 border: none;</string>
      </property>
      <property name="text">
-      <string>CAROLLINHA</string>
+      <string>CarolLinha</string>
      </property>
     </widget>
     <widget class="QGroupBox" name="gp_logo">
